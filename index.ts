@@ -1,5 +1,5 @@
 import { writeOutput } from './utils';
-import rawInput from './data/sample.json';
+import rawInput from './contacts.json';
 
 (() => {
   const inputs = rawInput as Record<string, any>[];
