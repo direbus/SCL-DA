@@ -8,7 +8,7 @@
     "refresh": "rm -rf node_modules/ dist/ build/ && npm i",
     "postuninstall": "npm prune",
     "dev": "npx ts-node index.ts",
-    "start": "node build/index",
+    "start": "node --max-old-space-size=8192 build/index",
     "build": "tsc"
   },
   "keywords": [

@@ -131,7 +131,9 @@ import { resolve } from 'path';
 
     const ganteng = connect[i].map(conn => inputs[conn].Id);
 
-    const extraGanteng = ganteng.sort().join('-');
+    const extraGanteng = ganteng
+      .sort((a, b) => Number(a) < Number(b) ? -1 : 1)
+      .join('-');
 
     const superDuperGanteng = `${extraGanteng}, ${nums[i]}`;
 
