@@ -3,6 +3,7 @@ import { resolve } from 'path';
 // import rawInput from './contacts.json';
 
 (() => {
+  console.log("Reading files...");
   const rawInput = require(
     resolve(process.cwd(), 'contacts.json'),
   );
@@ -24,6 +25,8 @@ import { resolve } from 'path';
     if (inputs[i].OrderId === '') {
       continue;
     }
+    console.log("Proccessing OrderId ", inputs[i].OrderId);
+
 
     for (let j = 0; j < inputs.length; j++) {
       if (inputs[j].OrderId === '') {
@@ -53,6 +56,7 @@ import { resolve } from 'path';
     if (inputs[i].Email === '') {
       continue;
     }
+    console.log("Proccessing Email ", inputs[i].Email);
 
     for (let j = 0; j < inputs.length; j++) {
       if (inputs[i].Email === '') {
@@ -82,6 +86,7 @@ import { resolve } from 'path';
     if (inputs[i].Phone === '') {
       continue;
     }
+    console.log("Proccessing Number ", inputs[i].Number);
 
     for (let j = 0; j < inputs.length; j++) {
       if (inputs[i].Phone === '') {
@@ -106,6 +111,7 @@ import { resolve } from 'path';
     }
   }
 
+  console.log("Connecting dots...");
   for (let i = 0; i < inputs.length; i++) {
     let res = 0;
 
@@ -117,7 +123,7 @@ import { resolve } from 'path';
   }
 
   const res = [];
-
+  console.log("Prepping outputs...");
   for (let i = 0; i < inputs.length; i++) {
     const obj: Record<string, string> = {
       'ticket_id': inputs[i].Id,
