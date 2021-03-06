@@ -25,7 +25,7 @@ import { resolve } from 'path';
     if (inputs[i].OrderId === '') {
       continue;
     }
-    console.log("Proccessing OrderId ", inputs[i].OrderId);
+    console.log("Proccessing OrderId ", inputs[i].OrderId, " (", (i / inputs.length) * 100, "%)");
 
 
     for (let j = 0; j < inputs.length; j++) {
@@ -56,7 +56,7 @@ import { resolve } from 'path';
     if (inputs[i].Email === '') {
       continue;
     }
-    console.log("Proccessing Email ", inputs[i].Email);
+    console.log("Proccessing Email ", inputs[i].Email, " (", (i / inputs.length) * 100, ")%");
 
     for (let j = 0; j < inputs.length; j++) {
       if (inputs[i].Email === '') {
@@ -66,7 +66,7 @@ import { resolve } from 'path';
       if (inputs[i].Email === inputs[j].Email) {
         const newArr: Set<string> = new Set();
         const newConnect: Set<number> = new Set();
-
+        resolve(process.cwd(), 'output.csv')
         connect[i].forEach(num => newConnect.add(num));
         connect[j].forEach(num => newConnect.add(num));
 
@@ -86,7 +86,7 @@ import { resolve } from 'path';
     if (inputs[i].Phone === '') {
       continue;
     }
-    console.log("Proccessing Number ", inputs[i].Number);
+    console.log("Proccessing Number ", inputs[i].Number, " (", (i / inputs.length) * 100, ")%");
 
     for (let j = 0; j < inputs.length; j++) {
       if (inputs[i].Phone === '') {
