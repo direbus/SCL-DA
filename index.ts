@@ -1,7 +1,12 @@
 import { writeOutput } from './utils';
-import rawInput from './data/sample.json';
+import { resolve } from 'path';
+// import rawInput from './contacts.json';
 
 (() => {
+  const rawInput = require(
+    resolve(process.cwd(), 'contacts.json'),
+  );
+
   const inputs = rawInput as Record<string, any>[];
 
   const links: string[][] = new Array(inputs.length);
