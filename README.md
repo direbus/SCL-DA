@@ -4,7 +4,7 @@ _Template_ solusi untuk Shopee Code League 2021 untuk kompetisi bidang _data ana
 
 ## Masukan
 
-Masukan **harus** diletakkan dalam berkas `input.csv` dalam direktori _root_.
+Masukan **harus** diletakkan dalam berkas `contacts.json` dalam direktori _root_.
 
 ## Jawaban
 
