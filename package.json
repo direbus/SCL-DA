@@ -8,6 +8,7 @@
     "refresh": "rm -rf node_modules/ dist/ build/ && npm i",
     "postuninstall": "npm prune",
     "dev": "npx ts-node index.ts",
+    "start": "node build/index",
     "build": "tsc"
   },
   "keywords": [
